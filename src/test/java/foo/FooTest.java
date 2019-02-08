@@ -47,17 +47,27 @@ public class FooTest {
 	@Test // Rule 4.1.1 if number contains "3" then add "Foo", with Rule 1!
 	public void doesNumberContainThree() {
 		String output = foo.compute(3);
-		Assert.assertTrue(output.contains("FooFoo"));
+		Assert.assertTrue(output.equals("FooFoo"));
 		output = foo.compute(33);
-		Assert.assertTrue(output.contains("FooFooFoo"));
+		Assert.assertTrue(output.equals("FooFooFoo"));
+		output = foo.compute(13);
+		Assert.assertTrue(output.equals("Foo"));
 	}
 	
 	// Rule 4.2 for each digit 5 add "Bar" in the digits order.
 	@Test // Rule 4.2.1, if number contains "5" then add "Bar, with Rule 2!
 	public void doesNumberContainFive() {
 		String output = foo.compute(5);
-		Assert.assertTrue(output.contains("BarBar"));
+		Assert.assertTrue(output.equals("BarBar"));
 		output = foo.compute(55);
-		Assert.assertTrue(output.contains("BarBarBar"));
+		Assert.assertTrue(output.equals("BarBarBar"));
+	}
+	
+	// Rule 4.3 for each digit 7 add "Qix" in the digits order
+	
+	@Test // Rule 4.3.1, in number contains "7" then add "Qix", with Rules 3!
+	public void doesNumberContainSeven() {
+		String output = foo.compute(7);
+		Assert.assertTrue(output.equals("QixQix"));
 	}
 }
