@@ -9,6 +9,9 @@ public class Foo {
 		if (input % 5 == 0) {
 			return "Bar";
 		}
+		if (input % 7 == 0) {
+			return "Qix";
+		}
 		return Integer.toString(input);
 	}
 }
