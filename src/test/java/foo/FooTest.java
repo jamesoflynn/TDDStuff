@@ -75,9 +75,11 @@ public class FooTest {
 
 	// Rule 5 (Step 2) We must replace "0" with "*"
 
-	@Test // Rue 5 0 is replaced with *;
+	@Test // Rule 5 0 is replaced with *;
 	public void areZerosReplacedWithStars() {
 		String output = foo.compute(0);
-		Assert.assertTrue("*".equals(output));
+		Assert.assertTrue("FooBarQix*".equals(output)); // Zero is a universal divisee! :-)
+		output = foo.compute(10);
+		Assert.assertTrue(output.equals("Bar*"));
 	}
 }

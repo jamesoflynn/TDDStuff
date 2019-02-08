@@ -19,6 +19,10 @@ public class Foo {
 				output.append("Foo");
 			} else if (ch == '5') {
 				output.append("Bar");
+			} else if (ch == '7') {
+				output.append("Qix");
+			} else if (ch == '0') {
+				output.append("*");
 			}
 		}
 		if (output.length() == 0) {
