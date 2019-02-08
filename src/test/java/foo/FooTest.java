@@ -72,4 +72,12 @@ public class FooTest {
 		output = foo.compute(77);
 		Assert.assertTrue(output.equals("QixQixQix"));
 	}
+
+	// Rule 5 (Step 2) We must replace "0" with "*"
+
+	@Test // Rue 5 0 is replaced with *;
+	public void areZerosReplacedWithStars() {
+		String output = foo.compute(0);
+		Assert.assertTrue("*".equals(output));
+	}
 }
