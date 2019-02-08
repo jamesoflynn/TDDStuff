@@ -17,6 +17,8 @@ public class Foo {
 		for (char ch : decInput.toCharArray()) {
 			if (ch == '3') {
 				output.append("Foo");
+			} else if (ch == '5') {
+				output.append("Bar");
 			}
 		}
 		if (output.length() == 0) {
