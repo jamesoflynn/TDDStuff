@@ -20,4 +20,10 @@ public class FooTest {
 		Assert.assertTrue("1".equals(output));
 	}
 
+
+	@Test
+	public void isDivisibleByThree() {
+		String output = foo.compute(3);
+		Assert.assertTrue(output.contains("Foo"));
+	}
 }
