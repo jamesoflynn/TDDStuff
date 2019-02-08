@@ -51,4 +51,13 @@ public class FooTest {
 		output = foo.compute(33);
 		Assert.assertTrue(output.contains("FooFooFoo"));
 	}
+	
+	// Rule 4.2 for each digit 5 add "Bar" in the digits order.
+	@Test // Rule 4.2.1, if number contains "5" then add "Bar, with Rule 2!
+	public void doesNumberContainFive() {
+		String output = foo.compute(5);
+		Assert.assertTrue(output.contains("BarBar"));
+		output = foo.compute(55);
+		Assert.assertTrue(output.contains("BarBarBar"));
+	}
 }
