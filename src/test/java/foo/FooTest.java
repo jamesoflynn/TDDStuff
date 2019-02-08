@@ -48,5 +48,7 @@ public class FooTest {
 	public void doesNumberContainThree() {
 		String output = foo.compute(3);
 		Assert.assertTrue(output.contains("FooFoo"));
+		output = foo.compute(33);
+		Assert.assertTrue(output.contains("FooFooFoo"));
 	}
 }
