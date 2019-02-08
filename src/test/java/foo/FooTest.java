@@ -38,4 +38,15 @@ public class FooTest {
 		String output = foo.compute(7);
 		Assert.assertTrue(output.contains("Qix"));
 	}
+	
+	// Rule 4. for each each digit 3, 5, 7 add "Foo", "Bar", "Qix" in the digit order.
+
+	
+	//	Rule 4.1 for each digit 3 add "Foo" in the Digits order.
+	
+	@Test // Rule 4.1.1 if number contains "3" then add "Foo", with Rule 1!
+	public void doesNumberContainThree() {
+		String output = foo.compute(3);
+		Assert.assertTrue(output.contains("FooFoo"));
+	}
 }
