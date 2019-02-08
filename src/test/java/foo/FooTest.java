@@ -32,4 +32,10 @@ public class FooTest {
 		String output = foo.compute(5);
 		Assert.assertTrue(output.contains("Bar"));
 	}
+
+	@Test // Rule 3 flag number divisible by 7.
+	public void isDivisibleBySeven() {
+		String output = foo.compute(7);
+		Assert.assertTrue(output.contains("Qix"));
+	}
 }
