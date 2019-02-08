@@ -75,11 +75,17 @@ public class FooTest {
 
 	// Rule 5 (Step 2) We must replace "0" with "*"
 
-	@Test // Rule 5 0 is replaced with *;
+	@Test // Rule 5.1 0 is replaced with *;
 	public void areZerosReplacedWithStars() {
 		String output = foo.compute(0);
 		Assert.assertTrue("FooBarQix*".equals(output)); // Zero is a universal divisee! :-)
 		output = foo.compute(10);
 		Assert.assertTrue(output.equals("Bar*"));
+	}
+
+	@Test // Rule 5.2 0 is replaced correctly in plain old non divisible by 3/5/7 numbers.
+	public void areZerosReplacedInNonFooBarQixNumbers() {
+		String output = foo.compute(101);
+		Assert.assertTrue(output.equals("1*1"));
 	}
 }
