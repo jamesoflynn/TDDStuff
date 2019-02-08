@@ -69,5 +69,7 @@ public class FooTest {
 	public void doesNumberContainSeven() {
 		String output = foo.compute(7);
 		Assert.assertTrue(output.equals("QixQix"));
+		output = foo.compute(77);
+		Assert.assertTrue(output.equals("QixQixQix"));
 	}
 }
