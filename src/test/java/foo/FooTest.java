@@ -88,4 +88,14 @@ public class FooTest {
 		String output = foo.compute(101);
 		Assert.assertTrue(output.equals("1*1"));
 	}
+	
+	@Test // the rest of the tests in the spec
+	public void remainingCustomerSpecTest() {
+		String output = foo.compute(303);
+		Assert.assertTrue(output.equals("FooFoo*Foo"));
+		output = foo.compute(105);
+		Assert.assertTrue(output.equals("FooBarQix*Bar"));
+		output = foo.compute(10101);
+		Assert.assertTrue(output.equals("FooQix**"));
+	}
 }
